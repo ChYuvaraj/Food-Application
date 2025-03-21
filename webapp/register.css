@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffcccc 0%, #ffffff 50%, #ffcccc 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 400px; /* Width of the form */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(255, 51, 51, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.wrapper:hover {
+    box-shadow: 0 20px 50px rgba(255, 51, 51, 0.3);
+}
+
+.wrapper .title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    color: #ffffff;
+    user-select: none;
+    background: linear-gradient(45deg, #ff3333, #ff6666);
+}
+
+.wrapper form {
+    padding: 25px 25px 45px 25px;
+}
+
+.wrapper form .field {
+    height: 48px;
+    width: 100%;
+    margin-top: 18px;
+    position: relative;
+}
+
+.wrapper form .field input {
+    height: 100%;
+    width: 90%; /* Decreased width of the input from the right */
+    outline: none;
+    font-size: 16px;
+    padding-left: 18px;
+    padding-right: 18px; /* Adjusted padding to give space on the right side */
+    border: 1px solid #ff9999;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus,
+form .field input:valid {
+    border-color: #ff3333;
+}
+
+.wrapper form .field label {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #999999;
+    font-weight: 400;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+form .field input:focus ~ label,
+form .field input:valid ~ label {
+    top: 0%;
+    font-size: 14px;
+    color: #ff3333;
+    background: #fff;
+    transform: translateY(-50%);
+    padding: 0 5px;
+}
+
+form .field input[type="submit"] {
+    color: #fff;
+    border: none;
+    padding-left: 0;
+    margin-top: 35px; /* Increased margin-top to move button downward */
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff3333, #ff6666);
+    transition: all 0.3s ease;
+    width: 80%; /* Further decreased the button width */
+    margin-left: auto; /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+    display: block; /* Ensure the button takes up the space */
+    text-align: center;
+}
+
+form .field input[type="submit"]:hover {
+    background: linear-gradient(45deg, #ff6666, #ff3333);
+}
+
+.wrapper form .signup-link {
+    color: #666666;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.wrapper form .signup-link a {
+    color: #ff3333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+form .signup-link a:hover {
+    color: #e60000;
+    text-decoration: underline;
+}
+
+@media (max-width: 420px) {
+    .wrapper {
+        width: 90%;
+        border-radius: 0;
+    }
+    
+    .wrapper .title {
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0; /* Increase vertical padding */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Increase horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 2rem; /* Increase logo size */
+    font-weight: bold;
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    max-width: 600px; /* Increase max-width */
+    width: 100%;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem; /* Increase padding */
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem; /* Increase font size */
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem; /* Increase padding */
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem; /* Increase font size */
+}
+
+.cart-link {
+    margin-right: 1.5rem; /* Increase margin */
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem; /* Increase font size */
+}
+
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-initial {
+    width: 40px; /* Increase size */
+    height: 40px; /* Increase size */
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem; /* Increase margin */
+    font-size: 1.2rem; /* Increase font size */
+}
+
+.username {
+    margin-right: 0.75rem; /* Increase margin */
+    font-size: 1.1rem; /* Increase font size */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0.75rem 0; /* Increase padding */
+}
+
+.profile-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem; /* Increase padding */
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem; /* Increase font size */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.restaurant-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: #ffa41c;
+}
+
+.delivery-time {
+    color: #666;
+}
+
+.address {
+    font-size: 0.9rem;
+    color: #666;
+}
+
