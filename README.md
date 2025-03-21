@@ -7,8 +7,7 @@ A full-stack Java-based food delivery application that allows users to browse re
 Technologies Used:
 Frontend: HTML, CSS, JSP
 Backend: Java
-Database: MySQL, JDBC
-Servlets
+Database: MySQL, JDBC, Servlets
 Other Tools: Apache Tomcat Server
 
 
